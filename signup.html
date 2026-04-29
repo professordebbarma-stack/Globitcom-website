@@ -22,10 +22,20 @@ function signup(){
     let user = document.getElementById("newUser").value;
     let pass = document.getElementById("newPass").value;
 
+    if(user === "" || pass === ""){
+        document.getElementById("msg").innerText = "Please fill all fields";
+        return;
+    }
+
     localStorage.setItem("username", user);
     localStorage.setItem("password", pass);
 
-    document.getElementById("msg").innerText = "Signup successful!";
+    document.getElementById("msg").innerText = "Signup successful! Redirecting...";
+
+    // 👉 Redirect after 1.5 seconds
+    setTimeout(function(){
+        window.location.href = "login.html";
+    }, 1500);
 }
 </script>
 

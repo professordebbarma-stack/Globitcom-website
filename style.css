@@ -172,3 +172,25 @@ footer {
 .dash-card:hover {
     transform: translateY(-8px);
 }
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.plan {
+    background: #111;
+    padding: 25px;
+    width: 220px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.plan button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #00bfff;
+    border: none;
+    color: white;
+}

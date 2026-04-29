@@ -7,15 +7,31 @@
 <body>
 
 <header>
-<h2>Dashboard</h2>
-<button onclick="logout()">Logout</button>
+    <div class="logo">
+        <h2>Globitcom Dashboard</h2>
+    </div>
+    <button onclick="logout()">Logout</button>
 </header>
 
-<section class="hero">
-<h1>Welcome <span id="user"></span></h1>
-    <script>
-document.getElementById("user").innerText = localStorage.getItem("username");
-</script>
+<section class="dashboard">
+    <h1>Welcome, <span id="user"></span></h1>
+
+    <div class="dash-cards">
+        <div class="dash-card">
+            <h3>Web Hosting</h3>
+            <p>Manage your hosting services</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>Cloud Services</h3>
+            <p>Control your cloud infrastructure</p>
+        </div>
+
+        <div class="dash-card">
+            <h3>Domains</h3>
+            <p>Manage your domain names</p>
+        </div>
+    </div>
 </section>
 
 <script>

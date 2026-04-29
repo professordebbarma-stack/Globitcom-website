@@ -13,6 +13,9 @@
 
 <section class="hero">
 <h1>Welcome <span id="user"></span></h1>
+    <script>
+document.getElementById("user").innerText = localStorage.getItem("username");
+</script>
 </section>
 
 <script>

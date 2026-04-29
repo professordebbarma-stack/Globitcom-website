@@ -1,4 +1,27 @@
-/* Logo */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0a0f1c;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -7,58 +30,92 @@
 
 .logo img {
     width: 40px;
-    height: 40px;
-}
-
-/* Navbar */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: #111;
-    color: white;
 }
 
 nav a {
-    margin: 0 10px;
-    color: white;
+    margin: 0 15px;
     text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
 
-/* Hero */
+nav a:hover {
+    color: #00bfff;
+}
+
+/* HERO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     background: linear-gradient(135deg, #0a0f1c, #001f3f);
-    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 .hero button {
-    padding: 12px 25px;
+    margin-top: 20px;
+    padding: 12px 30px;
     background: #00bfff;
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Features */
-.features {
+/* FEATURES / SERVICES */
+.features, .services-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    padding: 60px;
+    gap: 25px;
+}
+
+.card, .service-card {
+    background: #111;
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover, .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* ABOUT */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.contact-box {
+    text-align: center;
     padding: 50px;
 }
 
-.card {
-    background: #111;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    text-align: center;
+.contact-box input,
+.contact-box textarea {
+    width: 280px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
 }
-/* ===== LOGIN PAGE ===== */
+
+/* LOGIN */
 .login-box {
     background: #111;
     padding: 30px;
@@ -66,17 +123,16 @@ nav a {
     display: inline-block;
 }
 
-.login-box input {
-    padding: 10px;
-    width: 220px;
-    border: none;
-    border-radius: 5px;
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 60px;
+    background: #001f3f;
 }
 
-.login-box button {
-    padding: 10px 20px;
-    background: #00bfff;
-    border: none;
-    color: white;
-    cursor: pointer;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
 }

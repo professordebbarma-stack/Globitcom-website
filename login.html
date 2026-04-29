@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Globitcom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 style="text-align:center;">Login to Globitcom</h2>
+<!-- NAVBAR -->
+<header>
+    <h2>Globitcom</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
 
-<div style="text-align:center;">
-    <input type="text" placeholder="Username" id="user"><br><br>
-    <input type="password" placeholder="Password" id="pass"><br><br>
-    <button onclick="login()">Login</button>
-</div>
+<!-- LOGIN SECTION -->
+<section class="hero">
+    <h1>Login to Globitcom</h1>
 
-<script src="script.js"></script>
+    <div class="login-box">
+        <input type="text" id="username" placeholder="Enter Username"><br><br>
+        <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+        <button onclick="login()">Login</button>
+
+        <p id="msg"></p>
+
+        <p>Don't have an account? <a href="signup.html">Signup</a></p>
+    </div>
+</section>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    let storedUser = localStorage.getItem("username");
+    let storedPass = localStorage.getItem("password");
+
+    if(user === storedUser && pass === storedPass) {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "dashboard.html";
+    } else {
+        document.getElementById("msg").innerText = "Invalid Username or Password";
+    }
+}
+</script>
 
 </body>
 </html>

@@ -136,3 +136,8 @@ footer {
     padding: 20px;
     background: #000;
 }
+<section class="cta">
+    <h2>Launch Your Digital Future with Globitcom</h2>
+    <p>Reliable Hosting • Cloud • Telecom Solutions</p>
+    <button onclick="location.href='services.html'">Get Started</button>
+</section>

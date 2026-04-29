@@ -1,37 +1,79 @@
 body {
-    font-family: Arial;
     margin: 0;
-    background: #0f172a;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a2540;
     color: white;
+    padding: 10px 20px;
 }
 
-header {
-    background: #1e3a8a;
-    padding: 20px;
-    text-align: center;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-nav {
-    background: #111827;
-    padding: 10px;
-    text-align: center;
+.logo {
+    width: 50px;
+    margin-right: 10px;
 }
 
-nav a {
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
     color: white;
-    margin: 10px;
     text-decoration: none;
 }
 
-section {
-    padding: 30px;
+.navbar a:hover {
+    color: #00c3ff;
 }
 
-.card {
-    background: #1f2937;
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #007cf0, #00dfd8);
+    color: white;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: #007cf0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Services */
+.services {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-box {
+    margin: 20px;
     padding: 20px;
-    margin: 10px;
+    border: 1px solid #ddd;
     display: inline-block;
-    width: 200px;
+    width: 250px;
     border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #0a2540;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }

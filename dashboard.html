@@ -39,7 +39,7 @@ if(localStorage.getItem("loggedIn") !== "true"){
     window.location.href = "login.html";
 }
 </script>
-
+document.getElementById("user").innerText = localStorage.getItem("username");
 
 
 function logout(){

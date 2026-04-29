@@ -216,3 +216,14 @@ section {
         transform: translateY(0);
     }
 }
+.card, .service-card, .dash-card, .plan {
+    transition: all 0.3s ease;
+}
+
+.card:hover, 
+.service-card:hover, 
+.dash-card:hover, 
+.plan:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}

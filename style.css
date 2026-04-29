@@ -227,3 +227,11 @@ section {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #009acd;
+}
